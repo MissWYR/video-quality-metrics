@@ -1,5 +1,7 @@
 # Video Quality Metrics
 
+Firstly，wo should install "GraphicsMagick" in your system(such as windows),and add the file location to your computer path!!!
+
 Video quality metrics, reference implementation in python, with GPU optimizations and C versions as time permits.
 
 - VIF (sometimes called VIF-P or VIFP), Visual Information Fidelity: implemented
