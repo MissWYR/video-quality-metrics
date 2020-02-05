@@ -89,8 +89,8 @@ Estimate the parameters of an asymmetric generalized Gaussian distribution
 def estimate_aggd_params(x):
     x_left = x[x < 0]
     x_right = x[x >= 0]
-    stddev_left = math.sqrt((1.0/(x_left.size - 1)) * numpy.sum(x_left ** 2))
-    stddev_right = math.sqrt((1.0/(x_right.size - 1)) * numpy.sum(x_right ** 2))
+    stddev_left = math.sqrt((1.0/(x_left.size + 1)) * numpy.sum(x_left ** 2))
+    stddev_right = math.sqrt((1.0/(x_right.size + 1)) * numpy.sum(x_right ** 2))
     if stddev_right == 0:
         return 1, 0, 0 # TODO check this
     r_hat = numpy.mean(numpy.abs(x))**2 / numpy.mean(x**2)
